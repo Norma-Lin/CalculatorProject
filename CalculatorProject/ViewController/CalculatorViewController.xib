@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculatorViewController">
+            <connections>
+                <outlet property="m_btnAC" destination="KON-hD-fEj" id="nXH-Hs-fAa"/>
+                <outlet property="m_tfDisplay" destination="slH-FS-BbF" id="zHJ-AM-qaa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GMU-Np-926" userLabel="Number">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="220.66666666666666"/>
+                    <subviews>
+                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" borderStyle="roundedRect" placeholder="Input Number Here" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="slH-FS-BbF">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="220.66666666666666"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="slH-FS-BbF" secondAttribute="bottom" id="MJ9-ED-zNa"/>
+                        <constraint firstItem="slH-FS-BbF" firstAttribute="top" secondItem="GMU-Np-926" secondAttribute="top" id="aLf-0t-5ZK"/>
+                        <constraint firstItem="slH-FS-BbF" firstAttribute="leading" secondItem="GMU-Np-926" secondAttribute="leading" id="p9I-Nd-g8a"/>
+                        <constraint firstAttribute="trailing" secondItem="slH-FS-BbF" secondAttribute="trailing" id="xqf-kH-Kkm"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nXE-qD-44R" userLabel="Button">
+                    <rect key="frame" x="0.0" y="220.66666666666669" width="414" height="515.33333333333326"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KON-hD-fEj">
+                            <rect key="frame" x="40" y="18" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="AC"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CB5-qB-0RK">
+                            <rect key="frame" x="234" y="18" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="x!"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5G-9V-bGk">
+                            <rect key="frame" x="339" y="18" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="+"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufy-rV-zIT">
+                            <rect key="frame" x="339" y="115" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="-"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4RY-yI-tr8">
+                            <rect key="frame" x="339" y="227" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="x"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEG-AE-e40">
+                            <rect key="frame" x="339" y="332" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="÷"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVY-0u-AtV">
+                            <rect key="frame" x="339" y="430" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="="/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owF-mR-BLC">
+                            <rect key="frame" x="136" y="18" width="30" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="+/-"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="nXE-qD-44R" secondAttribute="trailing" id="LE9-6j-yOA"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="GMU-Np-926" secondAttribute="trailing" id="LNZ-Qd-4cW"/>
+                <constraint firstAttribute="bottom" secondItem="nXE-qD-44R" secondAttribute="bottom" id="Q6X-yy-25Y"/>
+                <constraint firstItem="GMU-Np-926" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Yhf-6D-nkM"/>
+                <constraint firstItem="nXE-qD-44R" firstAttribute="top" secondItem="GMU-Np-926" secondAttribute="bottom" id="dZo-X9-bgW"/>
+                <constraint firstItem="nXE-qD-44R" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dwY-XZ-Nem"/>
+                <constraint firstItem="GMU-Np-926" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="lmC-zk-Yvb"/>
+                <constraint firstItem="GMU-Np-926" firstAttribute="height" secondItem="nXE-qD-44R" secondAttribute="height" multiplier="3:7" id="nHb-X7-yte"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="139" y="137"/>
+        </view>
+    </objects>
+</document>
