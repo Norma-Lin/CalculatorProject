@@ -59,6 +59,9 @@
                             <state key="normal" title="7">
                                 <color key="titleColor" systemColor="labelColor"/>
                             </state>
+                            <connections>
+                                <action selector="numberButton:" destination="-1" eventType="touchUpInside" id="iVF-18-8YS"/>
+                            </connections>
                         </button>
                         <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAz-wr-LTB">
                             <rect key="frame" x="5" y="193.33333333333331" width="96" height="91.666666666666686"/>
@@ -67,6 +70,9 @@
                             <state key="normal" title="4">
                                 <color key="titleColor" systemColor="labelColor"/>
                             </state>
+                            <connections>
+                                <action selector="numberButton:" destination="-1" eventType="touchUpInside" id="nN6-XG-xxz"/>
+                            </connections>
                         </button>
                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="an8-8G-a6r">
                             <rect key="frame" x="5" y="289.99999999999994" width="96" height="91.666666666666686"/>
@@ -75,6 +81,9 @@
                             <state key="normal" title="1">
                                 <color key="titleColor" systemColor="labelColor"/>
                             </state>
+                            <connections>
+                                <action selector="numberButton:" destination="-1" eventType="touchUpInside" id="21z-56-quh"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqV-lY-ZPq">
                             <rect key="frame" x="0.0" y="386.66666666666669" width="101" height="91.666666666666686"/>
@@ -83,6 +92,9 @@
                             <state key="normal" title="0">
                                 <color key="titleColor" systemColor="labelColor"/>
                             </state>
+                            <connections>
+                                <action selector="numberButton:" destination="-1" eventType="touchUpInside" id="wX8-42-fO5"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.90588837860000004" green="0.90587139130000005" blue="0.90588301419999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -130,6 +142,9 @@
                             <state key="normal" title="5">
                                 <color key="titleColor" systemColor="labelColor"/>
                             </state>
+                            <connections>
+                                <action selector="numberButton:" destination="-1" eventType="touchUpInside" id="ylh-0w-1JL"/>
+                            </connections>
                         </button>
                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYx-7r-Va6">
                             <rect key="frame" x="2.3333333333333286" y="289.99999999999994" width="98.666666666666671" height="91.666666666666686"/>
@@ -138,6 +153,9 @@
                             <state key="normal" title="2">
                                 <color key="titleColor" systemColor="labelColor"/>
                             </state>
+                            <connections>
+                                <action selector="numberButton:" destination="-1" eventType="touchUpInside" id="UFd-l8-rHZ"/>
+                            </connections>
                         </button>
                         <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3I-pU-VOE">
                             <rect key="frame" x="2.3333333333333286" y="386.66666666666669" width="98.666666666666671" height="91.666666666666686"/>
@@ -157,6 +175,9 @@
                             <state key="normal" title="8">
                                 <color key="titleColor" systemColor="labelColor"/>
                             </state>
+                            <connections>
+                                <action selector="numberButton:" destination="-1" eventType="touchUpInside" id="5KC-a2-yFj"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.90588837860000004" green="0.90587139130000005" blue="0.90588301419999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -193,6 +214,9 @@
                             <state key="normal" title="9">
                                 <color key="titleColor" systemColor="labelColor"/>
                             </state>
+                            <connections>
+                                <action selector="numberButton:" destination="-1" eventType="touchUpInside" id="Jun-7v-1va"/>
+                            </connections>
                         </button>
                         <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcr-xd-l6O">
                             <rect key="frame" x="2.6666666666666572" y="193.33333333333331" width="98.333333333333329" height="91.666666666666686"/>
@@ -201,6 +225,9 @@
                             <state key="normal" title="6">
                                 <color key="titleColor" systemColor="labelColor"/>
                             </state>
+                            <connections>
+                                <action selector="numberButton:" destination="-1" eventType="touchUpInside" id="hdY-Ty-Jfd"/>
+                            </connections>
                         </button>
                         <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lW1-lL-pId">
                             <rect key="frame" x="2.6666666666666572" y="289.99999999999994" width="98.333333333333329" height="91.666666666666686"/>
@@ -209,6 +236,9 @@
                             <state key="normal" title="3">
                                 <color key="titleColor" systemColor="labelColor"/>
                             </state>
+                            <connections>
+                                <action selector="numberButton:" destination="-1" eventType="touchUpInside" id="sl8-XE-9fG"/>
+                            </connections>
                         </button>
                         <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PgS-aG-4no">
                             <rect key="frame" x="2.6666666666666572" y="386.66666666666669" width="98.333333333333329" height="91.666666666666686"/>

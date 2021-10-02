@@ -121,5 +121,34 @@ typedef NS_ENUM(NSInteger, OperationType) {
     self.isNew = NO;
 }
 
+- (IBAction)numberButton:(UIButton *)sender {
+    
+    NSInteger inputNumber = sender.tag;
+    NSString *displayText = self.calculationView.text;
+    
+    if (self.isNew) {
+        
+        displayText = [NSString stringWithFormat:@"%zd", inputNumber];
+        self.isNew = NO;
+    }
+    else {
+        if ([self.calculationSymbol isEqualToString:@""]) {
+            displayText = [NSString stringWithFormat:@"%@%zd", displayText, inputNumber];
+        }
+        else {
+           
+            displayText = [NSString stringWithFormat:@"%zd", inputNumber];
+            self.calculationSymbol = @"";
+        }
+    }
+    
+    if (displayText.length > 13) {
+        return;
+    }
+    self.calculationView.text = displayText;
+    NSLog(@"displayText = %@", displayText);
+    self.nowNumber = [displayText doubleValue];
+}
+
 
 @end
