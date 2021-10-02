@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalculatorViewController">
             <connections>
-                <outlet property="m_tfDisplay" destination="slH-FS-BbF" id="zHJ-AM-qaa"/>
+                <outlet property="calculationView" destination="slH-FS-BbF" id="9dt-a1-gmV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -48,6 +48,9 @@
                             <state key="normal" title="AC">
                                 <color key="titleColor" systemColor="systemPinkColor"/>
                             </state>
+                            <connections>
+                                <action selector="clearButton:" destination="-1" eventType="touchUpInside" id="Hj4-jX-7gk"/>
+                            </connections>
                         </button>
                         <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KtO-x6-uX2">
                             <rect key="frame" x="5" y="96.666666666666629" width="96" height="91.666666666666686"/>
@@ -116,6 +119,9 @@
                             <state key="normal" title="+/-">
                                 <color key="titleColor" systemColor="labelColor"/>
                             </state>
+                            <connections>
+                                <action selector="plusMinusChangeButton:" destination="-1" eventType="touchUpInside" id="VOr-Lo-i6M"/>
+                            </connections>
                         </button>
                         <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fi0-ez-yEL">
                             <rect key="frame" x="2.3333333333333286" y="193.33333333333331" width="98.666666666666671" height="91.666666666666686"/>
@@ -140,6 +146,9 @@
                             <state key="normal" title=".">
                                 <color key="titleColor" systemColor="labelColor"/>
                             </state>
+                            <connections>
+                                <action selector="pointButton:" destination="-1" eventType="touchUpInside" id="u40-Lq-1Hd"/>
+                            </connections>
                         </button>
                         <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsL-yX-8Tt">
                             <rect key="frame" x="2.3333333333333286" y="96.666666666666629" width="98.666666666666671" height="91.666666666666686"/>
@@ -208,6 +217,9 @@
                             <state key="normal" title="⌫">
                                 <color key="titleColor" systemColor="labelColor"/>
                             </state>
+                            <connections>
+                                <action selector="deleteButton:" destination="-1" eventType="touchUpInside" id="s7Z-a8-qv5"/>
+                            </connections>
                         </button>
                         <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLM-qE-K48">
                             <rect key="frame" x="2.6666666666666572" y="0.0" width="98.333333333333329" height="91.666666666666671"/>
@@ -216,6 +228,9 @@
                             <state key="normal" title="x!">
                                 <color key="titleColor" systemColor="labelColor"/>
                             </state>
+                            <connections>
+                                <action selector="factorialButton:" destination="-1" eventType="touchUpInside" id="Igb-Oj-ASD"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.90588837860000004" green="0.90587139130000005" blue="0.90588301419999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
