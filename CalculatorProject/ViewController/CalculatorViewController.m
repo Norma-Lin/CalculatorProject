@@ -72,10 +72,10 @@ typedef NS_ENUM(NSInteger, OperationType) {
     self.isCalculation = NO;
     self.isNew = YES;
 }
-
+#pragma mark To do: 正負轉換button
 - (IBAction)plusMinusChangeButton:(UIButton *)sender {
 }
-
+#pragma mark To do: 階乘button
 - (IBAction)factorialButton:(UIButton *)sender {
 }
 
@@ -142,7 +142,7 @@ typedef NS_ENUM(NSInteger, OperationType) {
         }
     }
     
-    if (displayText.length > 13) {
+    if (displayText.length > 15) {
         return;
     }
     self.calculationView.text = displayText;

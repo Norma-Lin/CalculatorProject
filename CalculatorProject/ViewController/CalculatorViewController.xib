@@ -23,17 +23,15 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GMU-Np-926" userLabel="Number">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="257.66666666666669"/>
                     <subviews>
-                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="slH-FS-BbF">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="257.66666666666669"/>
-                            <color key="backgroundColor" white="0.99054380663398167" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" placeholder="按下數字開始計算" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="slH-FS-BbF">
+                            <rect key="frame" x="0.0" y="110.00000000000001" width="414" height="37.666666666666671"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="slH-FS-BbF" secondAttribute="bottom" id="MJ9-ED-zNa"/>
-                        <constraint firstItem="slH-FS-BbF" firstAttribute="top" secondItem="GMU-Np-926" secondAttribute="top" id="aLf-0t-5ZK"/>
+                        <constraint firstItem="slH-FS-BbF" firstAttribute="centerY" secondItem="GMU-Np-926" secondAttribute="centerY" id="n03-yG-iv6"/>
                         <constraint firstItem="slH-FS-BbF" firstAttribute="leading" secondItem="GMU-Np-926" secondAttribute="leading" id="p9I-Nd-g8a"/>
                         <constraint firstAttribute="trailing" secondItem="slH-FS-BbF" secondAttribute="trailing" id="xqf-kH-Kkm"/>
                     </constraints>
@@ -362,6 +360,7 @@
                 <constraint firstItem="cHg-Ma-WhZ" firstAttribute="leading" secondItem="ycC-8A-8ug" secondAttribute="trailing" id="5RY-hT-AVX"/>
                 <constraint firstItem="gAd-y4-Vbl" firstAttribute="leading" secondItem="Byd-U5-JCt" secondAttribute="trailing" id="5VH-PB-ubs"/>
                 <constraint firstItem="gAd-y4-Vbl" firstAttribute="top" secondItem="GMU-Np-926" secondAttribute="bottom" id="BaN-cu-TM8"/>
+                <constraint firstItem="GMU-Np-926" firstAttribute="height" secondItem="Q5M-cg-NOt" secondAttribute="height" multiplier="0.35" id="BnA-Wm-CNp"/>
                 <constraint firstItem="Byd-U5-JCt" firstAttribute="width" secondItem="gAd-y4-Vbl" secondAttribute="width" id="DOC-Fd-lvj"/>
                 <constraint firstItem="ycC-8A-8ug" firstAttribute="width" secondItem="cHg-Ma-WhZ" secondAttribute="width" id="Ddr-QM-UAI"/>
                 <constraint firstAttribute="bottom" secondItem="gAd-y4-Vbl" secondAttribute="bottom" id="Fg1-cZ-hXA"/>
@@ -378,7 +377,6 @@
                 <constraint firstItem="cHg-Ma-WhZ" firstAttribute="width" secondItem="Byd-U5-JCt" secondAttribute="width" id="jhH-Df-oyN"/>
                 <constraint firstItem="Byd-U5-JCt" firstAttribute="leading" secondItem="cHg-Ma-WhZ" secondAttribute="trailing" id="jzU-Nn-QtG"/>
                 <constraint firstItem="GMU-Np-926" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="lmC-zk-Yvb"/>
-                <constraint firstItem="slH-FS-BbF" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.35" id="qLN-cq-ENQ"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="136.95652173913044"/>
         </view>
