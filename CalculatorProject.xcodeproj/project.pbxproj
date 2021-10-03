@@ -16,6 +16,9 @@
 		7972D28B24BD9C2E0022CD6B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7972D28A24BD9C2E0022CD6B /* Launch Screen.storyboard */; };
 		7972D28F24BDA11A0022CD6B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7972D28D24BDA11A0022CD6B /* FirstViewController.m */; };
 		7972D29024BDA11A0022CD6B /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7972D28E24BDA11A0022CD6B /* FirstViewController.xib */; };
+		B2A126D62709F4CF004567A4 /* FunctionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A126D52709F4CF004567A4 /* FunctionButton.m */; };
+		B2A126DA2709F67C004567A4 /* ColorConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A126D92709F67C004567A4 /* ColorConfig.m */; };
+		B2A126DF270A02A4004567A4 /* NumberButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A126DE270A02A4004567A4 /* NumberButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,12 @@
 		7972D28C24BDA11A0022CD6B /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		7972D28D24BDA11A0022CD6B /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		7972D28E24BDA11A0022CD6B /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
+		B2A126D42709F4CF004567A4 /* FunctionButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FunctionButton.h; sourceTree = "<group>"; };
+		B2A126D52709F4CF004567A4 /* FunctionButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionButton.m; sourceTree = "<group>"; };
+		B2A126D82709F67C004567A4 /* ColorConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorConfig.h; sourceTree = "<group>"; };
+		B2A126D92709F67C004567A4 /* ColorConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorConfig.m; sourceTree = "<group>"; };
+		B2A126DD270A02A4004567A4 /* NumberButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumberButton.h; sourceTree = "<group>"; };
+		B2A126DE270A02A4004567A4 /* NumberButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NumberButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +81,8 @@
 				7972D27524BD93C30022CD6B /* Info.plist */,
 				7972D27624BD93C30022CD6B /* main.m */,
 				7972D28A24BD9C2E0022CD6B /* Launch Screen.storyboard */,
+				B2A126D72709F62D004567A4 /* Common */,
+				B2A126D32709F430004567A4 /* View */,
 				7972D28224BD95520022CD6B /* ViewController */,
 			);
 			path = CalculatorProject;
@@ -88,6 +99,26 @@
 				7972D28524BD980F0022CD6B /* CalculatorViewController.xib */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B2A126D32709F430004567A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2A126D42709F4CF004567A4 /* FunctionButton.h */,
+				B2A126D52709F4CF004567A4 /* FunctionButton.m */,
+				B2A126DD270A02A4004567A4 /* NumberButton.h */,
+				B2A126DE270A02A4004567A4 /* NumberButton.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B2A126D72709F62D004567A4 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B2A126D82709F67C004567A4 /* ColorConfig.h */,
+				B2A126D92709F67C004567A4 /* ColorConfig.m */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,8 +193,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2A126D62709F4CF004567A4 /* FunctionButton.m in Sources */,
 				7972D26624BD93C10022CD6B /* AppDelegate.m in Sources */,
 				7972D27724BD93C30022CD6B /* main.m in Sources */,
+				B2A126DA2709F67C004567A4 /* ColorConfig.m in Sources */,
+				B2A126DF270A02A4004567A4 /* NumberButton.m in Sources */,
 				7972D28624BD980F0022CD6B /* CalculatorViewController.m in Sources */,
 				7972D28F24BDA11A0022CD6B /* FirstViewController.m in Sources */,
 			);

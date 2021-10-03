@@ -23,8 +23,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GMU-Np-926" userLabel="Number">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="257.66666666666669"/>
                     <subviews>
-                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" placeholder="按下數字開始計算" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="slH-FS-BbF">
-                            <rect key="frame" x="0.0" y="110.00000000000001" width="414" height="37.666666666666671"/>
+                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" placeholder="點擊數字開始計算" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="slH-FS-BbF">
+                            <rect key="frame" x="10" y="110.00000000000001" width="394" height="37.666666666666671"/>
                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
@@ -32,14 +32,14 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="slH-FS-BbF" firstAttribute="centerY" secondItem="GMU-Np-926" secondAttribute="centerY" id="n03-yG-iv6"/>
-                        <constraint firstItem="slH-FS-BbF" firstAttribute="leading" secondItem="GMU-Np-926" secondAttribute="leading" id="p9I-Nd-g8a"/>
-                        <constraint firstAttribute="trailing" secondItem="slH-FS-BbF" secondAttribute="trailing" id="xqf-kH-Kkm"/>
+                        <constraint firstItem="slH-FS-BbF" firstAttribute="leading" secondItem="GMU-Np-926" secondAttribute="leading" constant="10" id="p9I-Nd-g8a"/>
+                        <constraint firstAttribute="trailing" secondItem="slH-FS-BbF" secondAttribute="trailing" constant="10" id="xqf-kH-Kkm"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycC-8A-8ug" userLabel="View1">
                     <rect key="frame" x="0.0" y="257.66666666666674" width="103.66666666666667" height="478.33333333333326"/>
                     <subviews>
-                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n89-m5-3nw">
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n89-m5-3nw" customClass="FunctionButton">
                             <rect key="frame" x="5" y="0.0" width="96" height="91.666666666666671"/>
                             <color key="backgroundColor" red="0.82745098039215681" green="0.8901960784313725" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -50,7 +50,7 @@
                                 <action selector="clearButton:" destination="-1" eventType="touchUpInside" id="Hj4-jX-7gk"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KtO-x6-uX2">
+                        <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KtO-x6-uX2" customClass="NumberButton">
                             <rect key="frame" x="5" y="96.666666666666629" width="96" height="91.666666666666686"/>
                             <color key="backgroundColor" red="0.92459904810000004" green="0.98133239969999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -61,7 +61,7 @@
                                 <action selector="numberButton:" destination="-1" eventType="touchUpInside" id="iVF-18-8YS"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAz-wr-LTB">
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAz-wr-LTB" customClass="NumberButton">
                             <rect key="frame" x="5" y="193.33333333333331" width="96" height="91.666666666666686"/>
                             <color key="backgroundColor" red="0.92459904810000004" green="0.98133239969999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -72,7 +72,7 @@
                                 <action selector="numberButton:" destination="-1" eventType="touchUpInside" id="nN6-XG-xxz"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="an8-8G-a6r">
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="an8-8G-a6r" customClass="NumberButton">
                             <rect key="frame" x="5" y="289.99999999999994" width="96" height="91.666666666666686"/>
                             <color key="backgroundColor" red="0.92459904810000004" green="0.98133239969999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -83,9 +83,9 @@
                                 <action selector="numberButton:" destination="-1" eventType="touchUpInside" id="21z-56-quh"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqV-lY-ZPq">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqV-lY-ZPq" customClass="NumberButton">
                             <rect key="frame" x="0.0" y="386.66666666666669" width="101" height="91.666666666666686"/>
-                            <color key="backgroundColor" red="0.92459904810000004" green="0.98133239969999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="backgroundColor" red="0.92549019607843142" green="0.98039215686274506" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                             <state key="normal" title="0">
                                 <color key="titleColor" systemColor="labelColor"/>
@@ -122,7 +122,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cHg-Ma-WhZ" userLabel="View2">
                     <rect key="frame" x="103.66666666666669" y="257.66666666666674" width="103.33333333333331" height="478.33333333333326"/>
                     <subviews>
-                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJE-uj-DT8">
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJE-uj-DT8" customClass="FunctionButton">
                             <rect key="frame" x="2.3333333333333286" y="0.0" width="98.666666666666671" height="91.666666666666671"/>
                             <color key="backgroundColor" red="0.82745098039215681" green="0.8901960784313725" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -133,7 +133,7 @@
                                 <action selector="plusMinusChangeButton:" destination="-1" eventType="touchUpInside" id="VOr-Lo-i6M"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fi0-ez-yEL">
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fi0-ez-yEL" customClass="NumberButton">
                             <rect key="frame" x="2.3333333333333286" y="193.33333333333331" width="98.666666666666671" height="91.666666666666686"/>
                             <color key="backgroundColor" red="0.92459904810000004" green="0.98133239969999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -144,7 +144,7 @@
                                 <action selector="numberButton:" destination="-1" eventType="touchUpInside" id="ylh-0w-1JL"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYx-7r-Va6">
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYx-7r-Va6" customClass="NumberButton">
                             <rect key="frame" x="2.3333333333333286" y="289.99999999999994" width="98.666666666666671" height="91.666666666666686"/>
                             <color key="backgroundColor" red="0.92459904810000004" green="0.98133239969999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -155,7 +155,7 @@
                                 <action selector="numberButton:" destination="-1" eventType="touchUpInside" id="UFd-l8-rHZ"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3I-pU-VOE">
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3I-pU-VOE" customClass="NumberButton">
                             <rect key="frame" x="2.3333333333333286" y="386.66666666666669" width="98.666666666666671" height="91.666666666666686"/>
                             <color key="backgroundColor" red="0.92459904810000004" green="0.98133239969999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="fontDescription" type="system" weight="black" pointSize="25"/>
@@ -166,7 +166,7 @@
                                 <action selector="pointButton:" destination="-1" eventType="touchUpInside" id="u40-Lq-1Hd"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsL-yX-8Tt">
+                        <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsL-yX-8Tt" customClass="NumberButton">
                             <rect key="frame" x="2.3333333333333286" y="96.666666666666629" width="98.666666666666671" height="91.666666666666686"/>
                             <color key="backgroundColor" red="0.92459904810000004" green="0.98133239969999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -205,7 +205,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Byd-U5-JCt" userLabel="View3">
                     <rect key="frame" x="206.99999999999997" y="257.66666666666674" width="103.66666666666666" height="478.33333333333326"/>
                     <subviews>
-                        <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFX-Eh-iPX">
+                        <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFX-Eh-iPX" customClass="NumberButton">
                             <rect key="frame" x="2.6666666666666572" y="96.666666666666629" width="98.333333333333329" height="91.666666666666686"/>
                             <color key="backgroundColor" red="0.92459904810000004" green="0.98133239969999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -216,7 +216,7 @@
                                 <action selector="numberButton:" destination="-1" eventType="touchUpInside" id="Jun-7v-1va"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcr-xd-l6O">
+                        <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcr-xd-l6O" customClass="NumberButton">
                             <rect key="frame" x="2.6666666666666572" y="193.33333333333331" width="98.333333333333329" height="91.666666666666686"/>
                             <color key="backgroundColor" red="0.92459904810000004" green="0.98133239969999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -227,7 +227,7 @@
                                 <action selector="numberButton:" destination="-1" eventType="touchUpInside" id="hdY-Ty-Jfd"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lW1-lL-pId">
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lW1-lL-pId" customClass="NumberButton">
                             <rect key="frame" x="2.6666666666666572" y="289.99999999999994" width="98.333333333333329" height="91.666666666666686"/>
                             <color key="backgroundColor" red="0.92459904810000004" green="0.98133239969999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -238,7 +238,7 @@
                                 <action selector="numberButton:" destination="-1" eventType="touchUpInside" id="sl8-XE-9fG"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PgS-aG-4no">
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PgS-aG-4no" customClass="FunctionButton">
                             <rect key="frame" x="2.6666666666666572" y="386.66666666666669" width="98.333333333333329" height="91.666666666666686"/>
                             <color key="backgroundColor" red="0.82745098039215681" green="0.8901960784313725" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -249,7 +249,7 @@
                                 <action selector="deleteButton:" destination="-1" eventType="touchUpInside" id="s7Z-a8-qv5"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLM-qE-K48">
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLM-qE-K48" customClass="FunctionButton">
                             <rect key="frame" x="2.6666666666666572" y="0.0" width="98.333333333333329" height="91.666666666666671"/>
                             <color key="backgroundColor" red="0.82745098039215681" green="0.8901960784313725" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -288,45 +288,60 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gAd-y4-Vbl" userLabel="View4">
                     <rect key="frame" x="310.66666666666669" y="257.66666666666674" width="103.33333333333331" height="478.33333333333326"/>
                     <subviews>
-                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzc-nO-5w7">
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzc-nO-5w7" customClass="FunctionButton">
                             <rect key="frame" x="2.3333333333333144" y="96.666666666666629" width="96" height="91.666666666666686"/>
                             <color key="backgroundColor" red="0.82745098039215681" green="0.8901960784313725" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                             <state key="normal" title="×">
                                 <color key="titleColor" systemColor="labelColor"/>
                             </state>
+                            <connections>
+                                <action selector="multiplyButton:" destination="-1" eventType="touchUpInside" id="KBM-qQ-GL3"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbs-jg-DNT">
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbs-jg-DNT" customClass="FunctionButton">
                             <rect key="frame" x="2.3333333333333144" y="193.33333333333331" width="96" height="91.666666666666686"/>
                             <color key="backgroundColor" red="0.82745098039215681" green="0.8901960784313725" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                             <state key="normal" title="-">
                                 <color key="titleColor" systemColor="labelColor"/>
                             </state>
+                            <connections>
+                                <action selector="minusButton:" destination="-1" eventType="touchUpInside" id="oF7-B0-Z1a"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJf-m7-WKu">
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJf-m7-WKu" customClass="FunctionButton">
                             <rect key="frame" x="2.3333333333333144" y="289.99999999999994" width="96" height="91.666666666666686"/>
                             <color key="backgroundColor" red="0.82745098039215681" green="0.8901960784313725" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                             <state key="normal" title="+">
                                 <color key="titleColor" systemColor="labelColor"/>
                             </state>
+                            <connections>
+                                <action selector="plusButton:" destination="-1" eventType="touchUpInside" id="MDH-y5-Lf2"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayt-gh-XEn">
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayt-gh-XEn" customClass="FunctionButton">
                             <rect key="frame" x="2.3333333333333144" y="386.66666666666669" width="96" height="91.666666666666686"/>
                             <color key="backgroundColor" red="0.82745098039215681" green="0.8901960784313725" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                             <state key="normal" title="=">
                                 <color key="titleColor" systemColor="labelColor"/>
                             </state>
+                            <connections>
+                                <action selector="equalButton:" destination="-1" eventType="touchUpInside" id="bEj-6D-Hfs"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ok-uU-BXy">
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ok-uU-BXy" customClass="FunctionButton">
                             <rect key="frame" x="2.3333333333333144" y="0.0" width="96" height="91.666666666666671"/>
                             <color key="backgroundColor" red="0.82745098039215681" green="0.8901960784313725" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                             <state key="normal" title="÷">
                                 <color key="titleColor" systemColor="labelColor"/>
                             </state>
+                            <connections>
+                                <action selector="divisionButton:" destination="-1" eventType="touchUpInside" id="lgg-rS-NNL"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.90588837860000004" green="0.90587139130000005" blue="0.90588301419999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
