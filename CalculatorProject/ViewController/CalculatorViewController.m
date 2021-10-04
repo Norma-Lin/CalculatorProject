@@ -8,9 +8,7 @@
 
 #import "CalculatorViewController.h"
 
-#pragma mark - 問題列表
-#pragma mark 1. 可以打0001
-#pragma mark -
+
 
 typedef NS_ENUM(NSInteger, OperationType) {
     OperationTypePlus = 0,
@@ -24,17 +22,17 @@ typedef NS_ENUM(NSInteger, OperationType) {
 
 @property (weak, nonatomic) IBOutlet UITextField *calculationView;
 
-//可輸入下一組數字
+// 可輸入下一組數字
 @property (assign, nonatomic) BOOL canEnterNextNumber;
-//記錄目前數字
+// 記錄目前數字
 @property (assign, nonatomic) double nowNumber;
-//記錄上一個數字
+// 記錄上一個數字
 @property (assign, nonatomic) double previousNunber;
-//紀錄是否運算中
+// 紀錄是否運算中
 @property (assign, nonatomic) BOOL isCalculation;
-//是尚未輸入數字
+// 是尚未輸入數字
 @property (assign, nonatomic) BOOL isNeverInputNumber;
-//記錄目前運算
+// 記錄目前運算
 @property (assign, nonatomic) OperationType operation;
 
 @end
@@ -52,7 +50,6 @@ typedef NS_ENUM(NSInteger, OperationType) {
 }
 
 #pragma mark - Setter
-
 - (void)setNowNumber:(double)nowNumber {
     
     _nowNumber = nowNumber;
@@ -81,12 +78,12 @@ typedef NS_ENUM(NSInteger, OperationType) {
 #pragma mark +/-轉換
 - (IBAction)plusMinusChangeButton:(UIButton *)sender {
     
-    NSString *numberStr = [NSString stringWithFormat:@"%g", self.nowNumber];
-    if ([numberStr isEqualToString:@"0"]) {
+    // 排除 0的狀況
+    if (self.nowNumber == 0) {
         return;
     }
-    
     self.nowNumber = 0 - self.nowNumber;
+    // 為了讓按了運算符號後還可做正負轉換，需再轉換後再次把數值set到previousNunber
     if (self.isCalculation && self.canEnterNextNumber) {
         self.previousNunber = self.nowNumber;
     }
@@ -94,23 +91,19 @@ typedef NS_ENUM(NSInteger, OperationType) {
     
 }
 
-#pragma mark To do: 階乘button
 #pragma mark 階乘計算
 - (IBAction)factorialButton:(UIButton *)sender {
     
-    if (self.nowNumber >= 0 && self.nowNumber == (NSInteger)self.nowNumber) {
+    // 檢查是否可作階乘計算
+    if ([self factorialableCheck:self.nowNumber]) {
         
-        if (self.nowNumber > 170) {
-            self.calculationView.text = @"Error";
-        }
-        else {
-            double factorialNumber = [self factorialCalculate:self.nowNumber];
-            self.calculationView.text = [NSString stringWithFormat:@"%g", factorialNumber];
-            self.nowNumber = factorialNumber;
-        }
-        
+        double factorialNumber = [self factorialCalculate:self.nowNumber];
+        self.calculationView.text = [NSString stringWithFormat:@"%g", factorialNumber];
+        self.nowNumber = factorialNumber;
     }
-    
+    else {
+        self.calculationView.text = @"Error";
+    }
 }
 
 #pragma mark delete鍵
@@ -177,6 +170,9 @@ typedef NS_ENUM(NSInteger, OperationType) {
             self.canEnterNextNumber = NO;
         }
         else {
+            if ([displayText isEqualToString:@"0"]) {
+                return;
+            }
             displayText = [NSString stringWithFormat:@"%@%zd", displayText, inputNumber];
         }
     }
@@ -190,7 +186,7 @@ typedef NS_ENUM(NSInteger, OperationType) {
 }
 
 #pragma mark - 計算鍵
-//除
+// 除
 - (IBAction)divisionButton:(UIButton *)sender {
     
     if (self.isNeverInputNumber) {
@@ -205,7 +201,7 @@ typedef NS_ENUM(NSInteger, OperationType) {
     
 }
 
-//乘
+// 乘
 - (IBAction)multiplyButton:(UIButton *)sender {
     
     if (self.isNeverInputNumber) {
@@ -219,7 +215,7 @@ typedef NS_ENUM(NSInteger, OperationType) {
     self.operation = OperationTypeMultiply;
 }
 
-//減
+// 減
 - (IBAction)minusButton:(UIButton *)sender {
     
     if (self.isNeverInputNumber) {
@@ -233,7 +229,7 @@ typedef NS_ENUM(NSInteger, OperationType) {
     self.operation = OperationTypeMinus;
 }
 
-//加
+// 加
 - (IBAction)plusButton:(UIButton *)sender {
     
     if (self.isNeverInputNumber) {
@@ -247,7 +243,7 @@ typedef NS_ENUM(NSInteger, OperationType) {
     self.operation = OperationTypePlus;
 }
 
-//等於
+// 等於
 - (IBAction)equalButton:(UIButton *)sender {
     
     if (self.isNeverInputNumber) {
@@ -264,7 +260,7 @@ typedef NS_ENUM(NSInteger, OperationType) {
 }
 
 #pragma mark - Private Methods
-//計算
+// 計算
 - (void)calculate {
     
     NSLog(@"\n計算：");
@@ -318,14 +314,14 @@ typedef NS_ENUM(NSInteger, OperationType) {
 - (void)displayHandle:(double)number {
     
     NSString *numberStr = [NSString stringWithFormat:@"%g", number];
-    //超過15位以科學記號顯示
+    // 超過15位以科學記號顯示
     if (numberStr.length > 15) {
         numberStr = [self transformScientificNotation:number];
     }
     self.calculationView.text = numberStr;
 }
 
-//位數過多時轉換為科學記號
+// 位數過多時轉換為科學記號
 - (NSString *)transformScientificNotation:(double)number {
     
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc]init];
@@ -352,13 +348,32 @@ typedef NS_ENUM(NSInteger, OperationType) {
     }
 }
 
-//階乘計算
+// 階乘計算
 - (double)factorialCalculate:(NSInteger)number {
     
     if (number == 0 || number == 1) {
         return 1;
     }
     return number * [self factorialCalculate:number - 1];
+}
+
+// 是否可做階乘計算
+- (BOOL)factorialableCheck:(double)number {
+    
+    // 要是整數
+    if (number != (NSInteger)number) {
+        return NO;
+    }
+    // 不可為負
+    if (number < 0) {
+        return NO;
+    }
+    // 不可大於170
+    if (number > 170) {
+        return NO;
+    }
+    
+    return YES;
 }
 
 @end
