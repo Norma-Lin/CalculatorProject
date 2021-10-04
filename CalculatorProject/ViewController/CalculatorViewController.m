@@ -97,6 +97,20 @@ typedef NS_ENUM(NSInteger, OperationType) {
 #pragma mark To do: 階乘button
 #pragma mark 階乘計算
 - (IBAction)factorialButton:(UIButton *)sender {
+    
+    if (self.nowNumber >= 0 && self.nowNumber == (NSInteger)self.nowNumber) {
+        
+        if (self.nowNumber > 170) {
+            self.calculationView.text = @"Error";
+        }
+        else {
+            double factorialNumber = [self factorialCalculate:self.nowNumber];
+            self.calculationView.text = [NSString stringWithFormat:@"%g", factorialNumber];
+            self.nowNumber = factorialNumber;
+        }
+        
+    }
+    
 }
 
 #pragma mark delete鍵
@@ -311,6 +325,7 @@ typedef NS_ENUM(NSInteger, OperationType) {
     self.calculationView.text = numberStr;
 }
 
+//位數過多時轉換為科學記號
 - (NSString *)transformScientificNotation:(double)number {
     
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc]init];
@@ -335,6 +350,15 @@ typedef NS_ENUM(NSInteger, OperationType) {
         default:
             return @"";
     }
+}
+
+//階乘計算
+- (double)factorialCalculate:(NSInteger)number {
+    
+    if (number == 0 || number == 1) {
+        return 1;
+    }
+    return number * [self factorialCalculate:number - 1];
 }
 
 @end
