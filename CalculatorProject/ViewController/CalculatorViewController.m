@@ -78,9 +78,20 @@ typedef NS_ENUM(NSInteger, OperationType) {
     self.isNeverInputNumber = YES;
 }
 
-#pragma mark To do: 正負轉換button
 #pragma mark +/-轉換
 - (IBAction)plusMinusChangeButton:(UIButton *)sender {
+    
+    NSString *numberStr = [NSString stringWithFormat:@"%g", self.nowNumber];
+    if ([numberStr isEqualToString:@"0"]) {
+        return;
+    }
+    
+    self.nowNumber = 0 - self.nowNumber;
+    if (self.isCalculation && self.canEnterNextNumber) {
+        self.previousNunber = self.nowNumber;
+    }
+    self.calculationView.text = [NSString stringWithFormat:@"%g", self.nowNumber];
+    
 }
 
 #pragma mark To do: 階乘button
