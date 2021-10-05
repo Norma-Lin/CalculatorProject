@@ -157,6 +157,13 @@ typedef NS_ENUM(NSInteger, OperationType) {
     NSInteger inputNumber = sender.tag;
     NSString *displayText = self.calculationView.text;
     
+    // 排除小數點前連續輸入0的情況
+    if ([displayText isEqualToString:@"0"]) {
+        
+        self.isNeverInputNumber = YES;
+        self.canEnterNextNumber = YES;
+    }
+    // 輸入第一位數字
     if (self.isNeverInputNumber) {
         
         displayText = [NSString stringWithFormat:@"%zd", inputNumber];
@@ -164,15 +171,14 @@ typedef NS_ENUM(NSInteger, OperationType) {
         self.canEnterNextNumber = NO;
     }
     else {
+        // 按計算符號後輸入數字
         if (self.canEnterNextNumber) {
             
             displayText = [NSString stringWithFormat:@"%zd", inputNumber];
             self.canEnterNextNumber = NO;
         }
+        // 輸入第二位以上數字
         else {
-            if ([displayText isEqualToString:@"0"]) {
-                return;
-            }
             displayText = [NSString stringWithFormat:@"%@%zd", displayText, inputNumber];
         }
     }
