@@ -84,7 +84,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqV-lY-ZPq" customClass="NumberButton">
-                            <rect key="frame" x="0.0" y="386.66666666666669" width="101" height="91.666666666666686"/>
+                            <rect key="frame" x="5" y="386.66666666666669" width="96" height="91.666666666666686"/>
                             <color key="backgroundColor" red="0.92549019607843142" green="0.98039215686274506" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                             <state key="normal" title="0">
@@ -116,7 +116,7 @@
                         <constraint firstItem="KtO-x6-uX2" firstAttribute="leading" secondItem="ycC-8A-8ug" secondAttribute="leading" constant="5" id="jYQ-oK-tR4"/>
                         <constraint firstItem="KtO-x6-uX2" firstAttribute="height" secondItem="tAz-wr-LTB" secondAttribute="height" id="jpy-kj-NO9"/>
                         <constraint firstAttribute="trailing" secondItem="tAz-wr-LTB" secondAttribute="trailing" constant="2.5" id="pcF-IP-opV"/>
-                        <constraint firstItem="oqV-lY-ZPq" firstAttribute="leading" secondItem="ycC-8A-8ug" secondAttribute="leading" id="qke-8m-ejx"/>
+                        <constraint firstItem="oqV-lY-ZPq" firstAttribute="leading" secondItem="ycC-8A-8ug" secondAttribute="leading" constant="5" id="qke-8m-ejx"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cHg-Ma-WhZ" userLabel="View2">
@@ -383,7 +383,7 @@
                 <constraint firstItem="cHg-Ma-WhZ" firstAttribute="top" secondItem="GMU-Np-926" secondAttribute="bottom" id="LGB-ND-z2V"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="GMU-Np-926" secondAttribute="trailing" id="LNZ-Qd-4cW"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="gAd-y4-Vbl" secondAttribute="trailing" id="OsN-QE-2xt"/>
-                <constraint firstItem="ycC-8A-8ug" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="Pct-wt-5qX"/>
+                <constraint firstAttribute="bottom" secondItem="ycC-8A-8ug" secondAttribute="bottom" id="PTM-26-EUS"/>
                 <constraint firstAttribute="bottom" secondItem="cHg-Ma-WhZ" secondAttribute="bottom" id="WdC-7A-QT1"/>
                 <constraint firstAttribute="bottom" secondItem="Byd-U5-JCt" secondAttribute="bottom" id="WrD-gJ-21n"/>
                 <constraint firstItem="GMU-Np-926" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Yhf-6D-nkM"/>
